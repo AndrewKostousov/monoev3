@@ -259,9 +259,9 @@ namespace MonoBrickFirmware.Tools
 		
 		internal void Print ()
 		{
-			for (int i =0; i < Data.Length; i ++) {
+			/*for (int i =0; i < Data.Length; i ++) {
 				Console.WriteLine ("Data[{0}]: {1:X}",i,Data[i]);
-			}	
+			}*/
 		}
 		
 	}
