@@ -163,6 +163,19 @@ namespace MonoBrickFirmware.Sensors
 		}
 		
 		/// <summary>
+		/// Reads commands from the IR-Remote. This will change mode to remote
+		/// </summary>
+		/// <param name="channel">Channel.</param>
+		/// <returns>The remote command.</returns>
+		public byte ReadRemoteCommand(IRChannel channel)
+		{
+			if (Mode != IRMode.Remote) {
+				Mode = IRMode.Remote;
+			}
+			return ReadBytes(4)[(int)channel];
+		}
+		
+		/// <summary>
 		/// Gets the beacon location. This will change the mode to seek
 		/// </summary>
 		/// <returns>The beacon location.</returns>
